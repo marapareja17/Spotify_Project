@@ -3,11 +3,11 @@ package model;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Artist {
+public class MapManager {
 
     public HashMap<String, String> artistas;
 
-    public Artist(){
+    public MapManager(){
         artistas = new HashMap<>(Map.of(
                 "Rihana", "5pKCCKE2ajJHZ9KAiaK11H",
                 "Melendi", "1EXjXQpDx2pROygh8zvHs4",

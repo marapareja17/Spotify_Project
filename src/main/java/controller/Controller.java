@@ -7,14 +7,14 @@ import model.*;
 import java.util.Map;
 
 public class Controller {
-    private Artist artist;
+    private MapManager artist;
     private DbManager dbManager;
 
     private SpotifyAccessor accessor;
 
 
     public Controller(){
-        this.artist = new Artist();
+        this.artist = new MapManager();
         this.dbManager = new DbManager();
         try {this.accessor = new SpotifyAccessor();} catch (Exception e) {}
 

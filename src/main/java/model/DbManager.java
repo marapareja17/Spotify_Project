@@ -48,6 +48,9 @@ public class DbManager {
         }
     }
 
+    public void insertArtist(MapManager artist, Connection connection){
+        String sql = "INSERT INTO MapManager(id, name, popularity) VALUES(?, ?, ?)";
+    }
     public void insert(JsonObject json) throws SQLException {
         try {
             Connection conn = connect(dbPath);
@@ -69,7 +72,7 @@ public class DbManager {
                     ")");
 
 ;
-            statement.execute("INSERT INTO Tracks(tracId, trackName, trackDate, trackPopularity, trackDuration, trackExplicit)\n" +
+            statement.execute("INSERT INTO Tracks(trackId, trackName, trackDate, trackPopularity, trackDuration, trackExplicit)\n" +
                     "VALUES(json.get(\"id\").getAsString())" +
                     "VALUES(json.get(\"name\").getAsString())" +
                     "VALUES(json.get(\"date\").getAsString())" +

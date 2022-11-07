@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5368528c-e864-47cd-b0df-dfa93b8ed8aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Artist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/DbManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/SpotifyAccessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/SpotifyAuthorization.java" afterDir="false" />
+    <list default="true" id="5368528c-e864-47cd-b0df-dfa93b8ed8aa" name="Changes" comment="Versión sentencias sql">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Albums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Artists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Tracks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MapManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/DbManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DbManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +58,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667405847603</updated>
-      <workItem from="1667405849447" duration="38530000" />
+      <workItem from="1667405849447" duration="41454000" />
     </task>
+    <task id="LOCAL-00001" summary="Versión sentencias sql">
+      <created>1667834660807</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667834660807</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,10 +78,20 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Versión sentencias sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="Versión sentencias sql" />
   </component>
 </project>
