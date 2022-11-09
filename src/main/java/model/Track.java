@@ -1,20 +1,16 @@
 package model;
 
-public class Tracks {
+public class Track {
     private String trackId;
     private String trackName;
-    private String trackDate;
-    private int trackPopularity;
     private int trackDuration;
     private boolean trackExplicit;
 
-    public Tracks(String trackId, String trackName, String trackDate, int trackPopularity, int trackDuration, boolean trackExplicit) {
-        this.trackId = trackId;
-        this.trackName = trackName;
-        this.trackDate = trackDate;
-        this.trackPopularity = trackPopularity;
-        this.trackDuration = trackDuration;
-        this.trackExplicit = trackExplicit;
+    private String artistId;
+
+    private String albumId;
+
+    public Track() {
     }
 
     public String getTrackId() {
@@ -25,14 +21,6 @@ public class Tracks {
         return trackName;
     }
 
-    public String getTrackDate() {
-        return trackDate;
-    }
-
-    public int getTrackPopularity() {
-        return trackPopularity;
-    }
-
     public int getTrackDuration() {
         return trackDuration;
     }
@@ -40,6 +28,9 @@ public class Tracks {
     public boolean isTrackExplicit() {
         return trackExplicit;
     }
+
+    public String getTrackArtistId() { return artistId; }
+    public String getTrackAlbumId() { return albumId; }
 
 
     public void setTrackId(String trackId) {
@@ -50,14 +41,6 @@ public class Tracks {
         this.trackName = trackName;
     }
 
-    public void setTrackDate(String trackDate) {
-        this.trackDate = trackDate;
-    }
-
-    public void setTrackPopularity(int trackPopularity) {
-        this.trackPopularity = trackPopularity;
-    }
-
     public void setTrackDuration(int trackDuration) {
         this.trackDuration = trackDuration;
     }
@@ -65,4 +48,7 @@ public class Tracks {
     public void setTrackExplicit(boolean trackExplicit) {
         this.trackExplicit = trackExplicit;
     }
+
+    public void setTrackArtistId(String trackArtistId) { this.artistId = trackArtistId;}
+    public void setTrackAlbumId(String trackAlbumId) { this.albumId = trackAlbumId;}
 }

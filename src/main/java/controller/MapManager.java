@@ -1,4 +1,4 @@
-package model;
+package controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,11 +9,11 @@ public class MapManager {
 
     public MapManager(){
         artistas = new HashMap<>(Map.of(
-                "Rihana", "5pKCCKE2ajJHZ9KAiaK11H",
+                "Morat", "5C4PDR4LnhZTbVnKWXuDKD",
                 "Melendi", "1EXjXQpDx2pROygh8zvHs4",
-                "Imagine dragons", "53XhwfbYqKCa1cC15pYq2q",
-                "Taylor Swift", "06HL4z0CvFAxyc27GXpf02",
-                "Bizarrap", "716NhGYqD1jl2wI1Qkgq36"
+                "C.Tangana", "5TYxZTjIPqKM8K8NuP9woO",
+                "Nicki Nicole", "2UZIAOlrnyZmyzt1nuXr9y",
+                "Nathy Peluso", "3VHAySZQPlfGlNLslzXYpN"
         ));
     }
 

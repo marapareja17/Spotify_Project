@@ -1,4 +1,4 @@
-package model;
+package controller;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
@@ -15,8 +15,15 @@ import static java.net.HttpURLConnection.HTTP_OK;
 
 public class SpotifyAuthorization {
     private static final String ACCOUNT_BASE_URI = "https://accounts.spotify.com/api/token";
-    private static final String CLIENT_ID = "1df205aaeada4213b720862d1819b310";
-    private static final String CLIENT_SECRET = "e4c0a8691a20493fbbb5384971803542";
+    private static String CLIENT_ID;
+            //"1df205aaeada4213b720862d1819b310";
+    private static String CLIENT_SECRET;
+                    //"e4c0a8691a20493fbbb5384971803542";
+
+    public SpotifyAuthorization(String clientId, String clientSecret) {
+        CLIENT_ID = clientId;
+        CLIENT_SECRET = clientSecret;
+    }
 
     public static Token get() throws Exception {
         Token token = gson().fromJson(responseOf(request()), Token.class);

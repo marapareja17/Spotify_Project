@@ -1,4 +1,4 @@
-package model;
+package controller;
 
 
 import java.net.URI;
@@ -18,8 +18,9 @@ public class SpotifyAccessor {
     private final HttpClient client;
     private SpotifyAuthorization.Token authorization;
 
-    public SpotifyAccessor() throws Exception {
+    public SpotifyAccessor(String clientId, String clientSecret) throws Exception {
         client = HttpClient.newHttpClient();
+        new SpotifyAuthorization(clientId, clientSecret);
         authorization = SpotifyAuthorization.get();
     }
 

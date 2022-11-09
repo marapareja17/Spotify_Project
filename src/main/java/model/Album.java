@@ -1,17 +1,13 @@
 package model;
 
-public class Albums {
+public class Album {
     private String albumId;
     private String albumName;
     private String albumDate;
-    private int albumPopularity;
 
-    public Albums(String albumId, String albumName, String albumDate, int albumPopularity) {
-        this.albumId = albumId;
-        this.albumName = albumName;
-        this.albumDate = albumDate;
-        this.albumPopularity = albumPopularity;
-    }
+    private String artistId;
+
+
 
     public String getAlbumId() {
         return albumId;
@@ -25,8 +21,8 @@ public class Albums {
         return albumDate;
     }
 
-    public int getAlbumPopularity() {
-        return albumPopularity;
+    public String getArtistId() {
+        return artistId;
     }
 
     public void setAlbumId(String albumId) {
@@ -41,7 +37,7 @@ public class Albums {
         this.albumDate = albumDate;
     }
 
-    public void setAlbumPopularity(int albumPopularity) {
-        this.albumPopularity = albumPopularity;
+    public void setArtistId(String artistId){
+        this.artistId = artistId;
     }
 }

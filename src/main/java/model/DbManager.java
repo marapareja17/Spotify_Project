@@ -1,23 +1,28 @@
 package model;
 
-import com.google.gson.JsonObject;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class DbManager {
 
     private String dbPath;
     private Statement statement;
 
+    Connection connection;
+
+    Artist artist = new Artist();
+
     public DbManager(){
         dbPath =  "C:\\Users\\usuarioç\\IdeaProjects\\ingenieriasoftware\\Spotify\\database\\spotifydb.db";
         try {
-            Connection conn = connect(dbPath);
-            statement = conn.createStatement();
+            connection = connect(dbPath);
+            statement = connection.createStatement();
             System.out.println("Conexión establecida");
+            //System.out.println("El rojo es mi color favorito"); --> debug
+
+            statement.execute("DROP TABLE IF EXISTS Artists");
+            statement.execute("DROP TABLE IF EXISTS Albums");
+            statement.execute("DROP TABLE IF EXISTS Tracks");
+
 
             statement.execute("CREATE TABLE IF NOT EXISTS Artists (" +
                     "artistId TEXT PRIMARY KEY, " +
@@ -29,79 +34,85 @@ public class DbManager {
                     "albumId TEXT PRIMARY KEY, " +
                     "albumName TEXT NOT NULL," +
                     "albumDate TEXT NOT NULL," +
-                    "albumPopularity NUMBER" +
+                    "artistId TEXT," +
+                    "FOREIGN KEY (artistId) REFERENCES Artists(artistId)" +
                     ")");
 
             statement.execute("CREATE TABLE IF NOT EXISTS Tracks (" +
                     "trackId TEXT PRIMARY KEY, " +
                     "trackName TEXT NOT NULL," +
-                    "trackDate TEXT NOT NULL," +
-                    "trackPopularity NUMBER," +
                     "trackDuration NUMBER," +
-                    "trackExplicit BOOLEAN" +
+                    "trackExplicit BOOLEAN," +
+                    "artistId TEXT," +
+                    "albumId TEXT,"+
+                    "FOREIGN KEY (artistId) REFERENCES Artists(artistId)," +
+                    "FOREIGN KEY (albumId) REFERENCES Albums(albumId)" +
                     ")");
-
-            conn.close();
         }
         catch (SQLException e) {
             System.out.println("No se pudo conectar");
         }
     }
 
-    public void insertArtist(MapManager artist, Connection connection){
-        String sql = "INSERT INTO MapManager(id, name, popularity) VALUES(?, ?, ?)";
-    }
-    public void insert(JsonObject json) throws SQLException {
-        try {
-            Connection conn = connect(dbPath);
-            Statement statement2 = conn.createStatement();
-            System.out.println("Conexión establecida");
-
-            statement2.execute("INSERT INTO Artists (artistId, artistName, artistPopularity)\n" +
-                    "VALUES(json.get(\"id\").getAsString()" +
-                    ", (json.get(\"name\").getAsString()" +
-                    ", (json.get(\"popularity\").getAsInt()" +
-                    ");");
-
-
-            statement2.execute("INSERT INTO Albums(albumId, albumName, albumDate, albumPopularity)\n" +
-                    "VALUES(json.get(\"id\").getAsString())" +
-                    "VALUES(json.get(\"name\").getAsString())" +
-                    "VALUES(json.get(\"date\").getAsString())" +
-                    "VALUES(json.get(\"popularity\").getAsInt())" +
-                    ")");
-
-;
-            statement.execute("INSERT INTO Tracks(trackId, trackName, trackDate, trackPopularity, trackDuration, trackExplicit)\n" +
-                    "VALUES(json.get(\"id\").getAsString())" +
-                    "VALUES(json.get(\"name\").getAsString())" +
-                    "VALUES(json.get(\"date\").getAsString())" +
-                    "VALUES(json.get(\"popularity\").getAsInt())" +
-                    "VALUES(json.get(\"popularity\").getAsInt())" +
-                    "VALUES(json.get(\"popularity\").getAsBoolean())" +
-                    ")");
-
-            conn.close();
-        }
-        catch (SQLException e) {
-            System.out.println("No se pudo conectar");
+    public void insertArtist(Artist artist){
+        String sql = "INSERT INTO Artists(artistId, artistName, artistPopularity) VALUES(?,?,?)";
+        String artistName = (artist.getArtistName()).replaceAll("'","");
+        artistName = artistName.replaceAll("\"","");
+        try (PreparedStatement pstm = connection.prepareStatement(sql)){
+            pstm.setString(1, artist.getArtistId());
+            pstm.setString(2, artistName);
+            pstm.setInt(3, artist.getArtistPopularity());
+            pstm.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    public void ChangePath(String newPath){
-        dbPath = newPath;
+    public void insertAlbum(Album album){
+        String sql = "INSERT INTO Albums(albumId, albumName, albumDate, artistId) VALUES(?,?,?,?)";
+        String albumName = (artist.getArtistName()).replaceAll("'","");
+        albumName = albumName.replaceAll("\"","");
+        try (PreparedStatement pstm = connection.prepareStatement(sql)){
+            pstm.setString(1, album.getAlbumId());
+            pstm.setString(2, albumName);
+            pstm.setString(3, album.getAlbumDate());
+            pstm.setString(4, album.getArtistId());
+            pstm.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
-    public static Connection connect(String dbPath) {
+    public void insertTrack(Track track){
+        String sql = "INSERT INTO Tracks(trackId, trackName, trackDuration, trackExplicit, artistId, albumId) VALUES(?,?,?,?,?,?)";
+        String trackName = (artist.getArtistName()).replaceAll("'","");
+        trackName = trackName.replaceAll("\"","");
+        try (PreparedStatement pstm = connection.prepareStatement(sql)){
+            pstm.setString(1, track.getTrackId());
+            pstm.setString(2, trackName);
+            pstm.setInt(3, track.getTrackDuration());
+            pstm.setBoolean(4, track.isTrackExplicit());
+            pstm.setString(5, track.getTrackArtistId());
+            pstm.setString(6, track.getTrackAlbumId());
+            pstm.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public Connection connect(String dbPath) {
         Connection conn = null;
         try {
             String url = "jdbc:sqlite:" + dbPath;
             conn = DriverManager.getConnection(url);
-            System.out.println("Connection to SQLite has been established.");
+            System.out.println("Conexión con SQLite establecida.");
         } catch (SQLException e) {
             System.out.println("No se pudo establecer la conexión");
         }
         return conn;
+    }
+    public void closeConnection() throws SQLException {
+        connection.close();
     }
 
 }

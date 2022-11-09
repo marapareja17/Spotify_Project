@@ -1,14 +1,11 @@
 package model;
 
-public class Artists {
+public class Artist {
     private String artistId;
     private String artistName;
     private int artistPopularity;
 
-    public Artists(String artistId, String artistName, int artistPopularity) {
-        this.artistId = artistId;
-        this.artistName = artistName;
-        this.artistPopularity = artistPopularity;
+    public Artist() {
     }
 
     public String getArtistId() {

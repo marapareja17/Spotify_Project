@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5368528c-e864-47cd-b0df-dfa93b8ed8aa" name="Changes" comment="Versión sentencias sql">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Albums.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Artists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Tracks.java" afterDir="false" />
+    <list default="true" id="5368528c-e864-47cd-b0df-dfa93b8ed8aa" name="Changes" comment="Versión sentencias sql con clases artist, albums y tracks">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MapManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Albums.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Artists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Artist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/DbManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DbManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MapManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/SpotifyAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SpotifyAccessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/SpotifyAuthorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SpotifyAuthorization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Tracks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Track.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,17 +43,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,7 +63,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667405847603</updated>
-      <workItem from="1667405849447" duration="41454000" />
+      <workItem from="1667405849447" duration="65512000" />
+      <workItem from="1667935741119" duration="3954000" />
+      <workItem from="1668009388353" duration="6302000" />
     </task>
     <task id="LOCAL-00001" summary="Versión sentencias sql">
       <created>1667834660807</created>
@@ -67,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667834660807</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Versión sentencias sql con clases artist, albums y tracks">
+      <created>1667837589804</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667837589804</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +106,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Versión sentencias sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="Versión sentencias sql" />
+    <MESSAGE value="Versión sentencias sql con clases artist, albums y tracks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Versión sentencias sql con clases artist, albums y tracks" />
   </component>
 </project>
