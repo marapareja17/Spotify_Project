@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5368528c-e864-47cd-b0df-dfa93b8ed8aa" name="Changes" comment="Versión sentencias sql con clases artist, albums y tracks">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Albums.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Album.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Artists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Artist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/DbManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DbManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/MapManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MapManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/SpotifyAccessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SpotifyAccessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/SpotifyAuthorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SpotifyAuthorization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Tracks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Track.java" afterDir="false" />
-    </list>
+    <list default="true" id="5368528c-e864-47cd-b0df-dfa93b8ed8aa" name="Changes" comment="Versión final 1.2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +53,7 @@
       <updated>1667405847603</updated>
       <workItem from="1667405849447" duration="65512000" />
       <workItem from="1667935741119" duration="3954000" />
-      <workItem from="1668009388353" duration="6302000" />
+      <workItem from="1668009388353" duration="7215000" />
     </task>
     <task id="LOCAL-00001" summary="Versión sentencias sql">
       <created>1667834660807</created>
@@ -81,7 +69,28 @@
       <option name="project" value="LOCAL" />
       <updated>1667837589804</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Versión final 1.1">
+      <created>1668015753515</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668015753515</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Versión final 1.1">
+      <created>1668015853450</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668015853450</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Versión final 1.1">
+      <created>1668015883975</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668015883975</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +116,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Versión sentencias sql" />
     <MESSAGE value="Versión sentencias sql con clases artist, albums y tracks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Versión sentencias sql con clases artist, albums y tracks" />
+    <MESSAGE value="Versión final 1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Versión final 1.2" />
   </component>
 </project>
